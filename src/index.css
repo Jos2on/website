@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { filter: brightness(1) blur(5px); }
+  50% { filter: brightness(1.2) blur(10px); }
+  100% { filter: brightness(1) blur(5px); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-rotate {
+  0% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0.4;
+  }
+  100% { 
+    transform: scale(1) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes mailSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-80%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(80%);
+  }
+  100% {
+    transform: translateX(80%);
+    opacity: 1;
+  }
+}
+
+@keyframes lineSlide {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+    opacity: 0.5;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #fff, #a8b2d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(30px);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(255,255,255,0.025) 51%, transparent 52%),
+              radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(255,255,255,0.025) 51%, transparent 52%);
+  background-size: 60px 60px;
+  animation: gradient 15s ease infinite;
+  transform: rotate(30deg);
+}
+
+.feature-card {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(255,255,255,0.1);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  position: absolute;
+  animation: pulse-rotate 4s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.typewriter-cursor::after {
+  content: '|';
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+.animate-mail .mail-icon {
+  animation: mailSlide 2s ease-out forwards;
+}
+
+.animate-mail .mail-icon-back {
+  animation: mailSlide 2s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.motion-lines {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.motion-lines::before,
+.motion-lines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.motion-lines::before {
+  top: 25%;
+}
+
+.motion-lines::after {
+  top: 75%;
+}
+
+.animate-mail .motion-lines::before,
+.animate-mail .motion-lines::after {
+  animation: lineSlide 2s ease-out forwards;
+}
+
+.workflow-diagram {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

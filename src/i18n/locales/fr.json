@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "about": "À propos",
+    "bookCall": "Réserver un appel"
+  },
+  "hero": {
+    "title": "IA Souveraine Super",
+    "subtitle": "Transformez votre entreprise avec l'automatisation alimentée par l'IA. Intégration transparente des agents de chat, de la génération de leads et des systèmes CRM.",
+    "getStarted": "Commencer",
+    "b2bSolutions": "Solutions B2B",
+    "b2bDescription": "Donner aux entreprises les moyens d'utiliser une technologie d'IA de pointe",
+    "customization": "Solutions Personnalisées",
+    "customizationDescription": "Implémentations d'IA adaptées à vos besoins spécifiques",
+    "integration": "Intégration Transparente",
+    "integrationDescription": "Connectez-vous facilement à vos systèmes existants"
+  },
+  "contact": {
+    "title": "Planifier une Consultation",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer la Demande"
+  },
+  "features": {
+    "aiChatAgents": {
+      "title": "Agents de Chat IA",
+      "description": "Conversations fluides, connexions plus intelligentes."
+    },
+    "leadGeneration": {
+      "title": "Génération de Leads",
+      "description": "Plus de leads, moins d'effort. Prospection alimentée par l'IA."
+    },
+    "crmIntegration": {
+      "title": "Intégration CRM",
+      "description": "Chaque appel, chaque aperçu—en synchronisation parfaite."
+    },
+    "websiteCreation": {
+      "title": "Création de Site Web Personnalisé",
+      "description": "Designs magnifiques, fonctionnalité transparente. Votre vision, notre expertise."
+    },
+    "learnMore": "En Savoir Plus"
+  }
+}

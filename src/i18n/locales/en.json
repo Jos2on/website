@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "features": "Features",
+    "about": "About",
+    "bookCall": "Book a Call"
+  },
+  "hero": {
+    "title": "Automation, Elevated.",
+    "subtitle": " Transform your operations with AI that connects it all. Fast, seamless, and built for results.",
+    "getStarted": "Get Started",
+    "b2bSolutions": "B2B Solutions",
+    "b2bDescription": "Empowering enterprises with cutting-edge AI technology",
+    "customization": "Custom Solutions",
+    "customizationDescription": "Tailored AI implementations for your specific needs",
+    "integration": "Seamless Integration",
+    "integrationDescription": "Connect with your existing systems effortlessly"
+  },
+  "contact": {
+    "title": "Schedule a Consultation",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit Request"
+  },
+  "features": {
+    "aiChatAgents": {
+      "title": "AI Chat Agents",
+      "description": "Seamless conversations, smarter connections."
+    },
+    "leadGeneration": {
+      "title": "Email AI Automation",
+      "description": "Personalized outreach. On autopilot."
+    },
+    "crmIntegration": {
+      "title": "AI Voice Agent",
+      "description": "Every call, every insight—effortlessly in sync."
+    },
+    "websiteCreation": {
+      "title": "Custom Website Creation",
+      "description": "Stunning designs, seamless functionality. Your vision, our expertise."
+    },
+    "learnMore": "Learn More"
+  }
+}
